@@ -6,7 +6,6 @@
     <title>Interactive Login Page</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Minimal styling for the form */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -93,7 +92,7 @@
                 <div class="login-register">
                     <p>
                         Don't have an account?
-                        <a href="portfolio.html" class="register-link">Sign up</a>
+                        <a class="register-link">Sign up</a>
                     </p>
                 </div>
             </form>
@@ -101,22 +100,22 @@
     </div>
 
     <script>
-        // JavaScript functionality for the login form
+    
         document.getElementById('submitBtn').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default button behavior
+            event.preventDefault();
 
-            // Get input values
+            // Getting input values
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Validate inputs
+            // Validating inputs
             if (email === '' || password === '') {
                 alert('Please fill out all fields.');
             } else if (!validateEmail(email)) {
                 alert('Please enter a valid email address.');
             } else {
                 alert('Login successful!');
-                // Redirect to portfolio.html
+                // Redirecting to portfolio.html
                 window.location.href = 'portfolio.html';
             }
         });
